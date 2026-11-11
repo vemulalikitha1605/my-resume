@@ -1,15 +1,20 @@
 .resume-body {
   display: flex;
-  gap: 40px;
+  flex-direction: row;
+  gap: 60px;
   align-items: flex-start; /* important */
+  width: 300mm;
+  min-height: 300mm;
+  max-width: 100%;
+  margin: 0 auto;
 }
 
 .left-column {
-  width: 70%;
+  width: 65%;
 }
 
 .right-column {
-  width: 30%;
+  width: 35%;
 }
 
 section {
