@@ -189,17 +189,16 @@ section ul:not(.technical-skills) li {
 
 /* PRINT SETTINGS */
 
+
+/* PRINT SETTINGS */
+
 @page {
   size: A4;
   margin: 0;
 }
 
 @media print {
-  .education-section {
-    break-before: page;
-    page-break-before: always;
-    padding-top: 15mm;
-  }
+
   html,
   body {
     width: 210mm;
@@ -216,11 +215,40 @@ section ul:not(.technical-skills) li {
     box-shadow: none;
   }
 
-  section,
+  section {
+    break-inside: auto;
+    page-break-inside: auto;
+  }
+
+  .opentext {
+    break-before: page;
+    page-break-before: always;
+    margin-top: 10mm;
+}
+
   .experience {
     break-inside: auto;
+    page-break-inside: auto;
+  }
+
+  .education-section {
+    break-before: auto;
+    page-break-before: auto;
+    padding-top: 0;
+  }
+
+  h3,
+  h4 {
+    break-after: avoid;
+    page-break-after: avoid;
+  }
+
+  li {
+    break-inside: avoid;
+    page-break-inside: avoid;
   }
 }
+
 
 /* MOBILE PREVIEW */
 
